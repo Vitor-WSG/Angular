@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "GOL",
+      "price": 30000
+    },
+    {
+      "id": 2,
+      "name": "PALIO",
+      "price": 25000
+    },
+    {
+      "id": 3,
+      "name": "UNO",
+      "price": 23000
+    },
+    {
+      "name": "CELTA",
+      "price": 22000,
+      "id": 5
+    }
+  ]
+}
