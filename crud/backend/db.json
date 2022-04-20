@@ -14,26 +14,6 @@
       "id": 3,
       "name": "UNO",
       "price": 23000
-    },
-    {
-      "name": "CELTA",
-      "price": 22000,
-      "id": 5
-    },
-    {
-      "name": "produto teste",
-      "price": 120.98,
-      "id": 6
-    },
-    {
-      "name": "produto teste",
-      "price": 120.98,
-      "id": 7
-    },
-    {
-      "name": "produto teste",
-      "price": "123.99",
-      "id": 8
     }
   ]
 }
