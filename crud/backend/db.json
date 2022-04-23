@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "name": "GOL",
-      "price": 30000
+      "name": "GOL 1.5 TURBO",
+      "price": "40000"
     },
     {
       "id": 2,
