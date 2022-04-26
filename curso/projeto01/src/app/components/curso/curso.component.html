@@ -1,0 +1,7 @@
+<p>Lista de cursos do portal: {{ nomePortal }}</p>
+<ul>
+    <li *ngFor="let lista of cursos">{{lista}}</li>
+        <!-- Equivalente a isso:
+        for (let i=0; i<this.cursos.length; i++){
+        let curso = this.cursos -->
+</ul>
