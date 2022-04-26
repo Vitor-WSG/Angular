@@ -1,0 +1,15 @@
+.class_binding{
+    background-color:black;
+    color: white;
+    font-size:50px;
+    
+}
+.class_binding2{
+    background-color:red;
+    color: white;
+    font-size:50px;
+}
+.hightLigth{
+    background-color:yellow;
+    font-weight: bold;
+}

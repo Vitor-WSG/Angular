@@ -1,5 +1,6 @@
 //MODULO RAIZ 
 
+import { FormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,7 +20,8 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CursoModule // Modulo complementar
+    CursoModule,// Modulo complementar
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

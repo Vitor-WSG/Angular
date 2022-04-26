@@ -1,14 +1,103 @@
 <section class="property-binding">
     <article>
-        <h1>Conceitos de interpolação e property-binding</h1>
+        <h1>Conceitos de: Interpolação/Property-binding/Class Style binding/Event binding</h1>
+        <br><br>
         <h2>Conceitos de interpolação</h2>
         <p>String reinderizda com interpolação {{ url }}</p>
         <p>O resultado de 1 + 1 =  {{ 1+1 }}</p>
         <p>O resultado de 1+1 não é = {{ 1+1+getValor() }}</p>
         <p>Voce gosta do curso? {{ cursoAngular && getCurtirCurso() }}</p>
-        <h2>Conceito de property-binding</h2>
+    </article>
+
+    <article>
+      <!--   <h2>Conceito de property-binding</h2>
         <img src="{{ urlImage }}">
         <br>
-        <img [src]="urlImage">
+        <img [src]="urlImage"> -->
     </article>
+
+    <article>
+        <h2>Class e style binding</h2>
+        <div>Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="success">Sucesso</option>
+                <option value="danger">Perigo</option>
+                <option value="warning">Cuidado</option>
+                <option value="info">Informação</option>
+                <option value="class_binding">Class binding 1 </option>
+                <option value="teste">Class binding 2 </option>
+            </select>
+        </div>
+        <br><br>
+        <div class="alert alert-{{classe.value}}">Texto colorido conforme valor do Combobox</div>
+        <div class="alert" role="alert" [class.alert-success]="classe.value == 'success'" 
+        [style.display]="classe.value == 'success'? 'block':'none'">
+            Alerta de SUCESSO!
+          </div>
+          <div class="alert" role="alert" [class.alert-danger]="classe.value=='danger'"
+          [style.display]="classe.value == 'danger'? 'block':'none'">
+            Alerta de PERIGO!
+          </div>
+          <div class="alert" role="alert" [class.alert-warning]="classe.value=='warning'"
+          [style.display]="classe.value == 'warning'? 'block':'none'">
+            Alerta de CUIDADO!
+          </div>
+          <div class="alert" role="alert" [class.alert-info]="classe.value=='info'"
+          [style.display]="classe.value == 'info'? 'block':'none'">
+            Alerta de INFORMAÇÃO!
+          </div>
+          <div class="{{classe.value}}">
+            Exemplo de class/style binding
+          </div>
+          <div [class.class_binding2]="classe.value=='teste'">
+            Exemplo de class/style binding2
+          </div>
+          <br><br>
+    </article>
+        <br><br>
+    <article>
+        <h2>Event Binding</h2>
+        <button type="button" class="btn btn-primary"
+        (click)="clique()">Clique aqui</button>
+        <br><br>
+
+        <input type="text"
+        #campoInput
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(campoInput.value)">
+        <p>O valor digitado foi: {{ valorAtual }}</p>
+        <p>Valor salvo: {{ valorSalvo }}</p>
+
+        <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.hightLigth]="isMouse">
+            Passe o Mouse...
+        </span>
+    </article>
+    <br><br>
+    <article>
+        <h2>Two-way data binding</h2>
+        <input
+        type="text" 
+        [(ngModel)]="nome"
+        />
+        <p>Voce digitou: {{ nome }}</p>
+        <br><br>
+        <p>Informe seus dados:</p>
+        <p>Nome: <input type="text" [(ngModel)]="pessoa.nome"/></p>
+        <p>Idade: <input type="text" [(ngModel)]="pessoa.idade"/></p>
+        <p>Cidade: <input type="text" [(ngModel)]="pessoa.endereco.cidade"/></p>
+        <p>Estado: <input type="text" [(ngModel)]="pessoa.endereco.estado"/></p>
+    
+    <p>Seja bem vindo, {{pessoa.nome}}, sua idade e {{pessoa.idade}} anos
+        voce mora na cidade de {{pessoa.endereco.cidade}} no estado de {{pessoa.endereco.estado}}
+    </p>
+    <p>{{pessoa.nome}}, informe sua lista de livros:</p>
+    <input type="text" [(ngModel)]="cursos"/>
+    <ul>
+        <li *ngFor='let lista of cursos'>{{lista}}</li>
+    </ul>
+    </article>
+
 </section>
