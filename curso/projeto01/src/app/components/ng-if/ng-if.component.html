@@ -1,0 +1,8 @@
+<h2>Uso do ngIf</h2>
+<h5>Lista de livros</h5>
+<div *ngIf="livros.length>0">
+    <ul *ngFor="let curso of livros">
+        <li>{{curso}}</li>
+    </ul>
+</div>
+<!-- Exibe a lista de livros somente se estiver valor no array -->

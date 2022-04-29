@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [class.active]="aba === 'Home'" 
+        (click)="aba ='Home' "href="#">Home</a>
+
+        <a class="nav-item nav-link" [class.active]="aba === 'Features'" 
+        (click)="aba= 'Features'" href="#">Features</a>
+
+        <a class="nav-item nav-link" [class.active]="aba === 'Pricing'" 
+        (click)="aba = 'Pricing'" href="#">Pricing</a>
+      </div>
+    </div>
+  </nav>
+  <div class="alert alert-primary" role="alert" [ngSwitch]="aba">
+    <h4 class="alert-heading">{{aba}}</h4>
+    <p *ngSwitchCase="'Pricing'">Modo Pricing Ativado</p>
+    <p *ngSwitchCase="'Features'">Modo Feature Ativado</p>
+    <p *ngSwitchDefault>Home</p>
+  </div>
