@@ -8,14 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Project2Component } from './components/project2/project2.component';
 import {CursoModule} from './components/curso/curso.module';
-import { DataBindingComponent } from './components/data-binding/data-binding.component'
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { ContadorComponent } from './components/contador/contador.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     Project2Component,
-    DataBindingComponent
+    DataBindingComponent,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,

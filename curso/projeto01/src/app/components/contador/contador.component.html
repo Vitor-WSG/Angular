@@ -1,0 +1,17 @@
+<span>Aletrado por variavel, usando property-binding: </span>
+<button type="button" class="btn btn-primary" 
+(click)="incrementaValor()">+</button>
+
+<input type="text" readonly [value]="valor">
+
+<button type="button" class="btn btn-primary"
+(click)="decrementaValor()">-</button>
+<br>
+<span>Aletrado por VieweChild: </span>
+<button type="button" class="btn btn-primary" 
+(click)="incrementaValor2()">+</button>
+
+<input type="text" readonly [value]="valor" #campoInput>
+
+<button type="button" class="btn btn-primary"
+(click)="decrementaValor2()">-</button>
