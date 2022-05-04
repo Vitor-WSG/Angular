@@ -1,4 +1,21 @@
-<h5>
-    <i class="bi bi-heart">
+<!-- <h1>
+    <i class="glyphicon"
+    [class.glyphicon-star-empty]="!favorito"
+    [class.glyphicon-star]="favorito"
+    (click)="onClick()">Favorito
     </i>
-</h5>
+</h1>
+ -->
+<h2>
+    Exemplo do uso ngClass
+</h2>
+<h1>
+  <i class="glyphicon"
+  [ngClass]="{
+    'glyphicon-star-empty':favorito==='nao' || favorito==='',
+    'glyphicon-star':favorito==='sim'
+  }"
+  (click)="onClick()"></i>
+  <p>Gostou do conteudo? </p>
+<input type="text" [(ngModel)]="favorito" [value]="favorito">
+</h1>

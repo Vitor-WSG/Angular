@@ -12,7 +12,12 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { ContadorComponent } from './components/contador/contador.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
-import { NgClassComponent } from './components/ng-class/ng-class.component'
+import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { NgContentComponent } from './components/ng-content/ng-content.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { AlteraCorDirective } from './shared/altera-cor.directive';
+import { DiretivasCustomizadasComponent } from './components/diretivas-customizadas/diretivas-customizadas.component';
+import { HighligthDirective } from './shared/highligth.directive'
 
 
 @NgModule({
@@ -23,7 +28,12 @@ import { NgClassComponent } from './components/ng-class/ng-class.component'
     ContadorComponent,
     NgIfComponent,
     NgSwitchComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgContentComponent,
+    NgStyleComponent,
+    AlteraCorDirective,
+    DiretivasCustomizadasComponent,
+    HighligthDirective
   ],
   imports: [
     BrowserModule,

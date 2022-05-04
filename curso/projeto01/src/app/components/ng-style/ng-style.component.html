@@ -1,0 +1,14 @@
+<h2>Exemplo de ngStyle</h2>
+<button 
+[style.backgroundColor]="ativo? 'blue' : 'gray'"
+[style.color]="ativo? 'white':'black'"
+[style.fontWeight]="ativo? 'bold':'normal'"
+[style.fontSize]="tamanhoFonte+'px'"
+(click)="changeStyle()">
+Alterar atributo
+</button>
+<br>
+<br>
+<button (click)="zoonOut()">-</button>
+<input type="text" [(ngModel)]="tamanhoFonte" [value]="tamanhoFonte" readonly>
+<button (click)="zoonIn()">+</button>

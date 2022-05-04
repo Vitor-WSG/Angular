@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-class.component.css']
 })
 export class NgClassComponent implements OnInit {
-favorito: boolean= false
-  constructor() { }
+favorito: string='nao'
+constructor() { }
 
   ngOnInit(): void {
   }
-
+onClick(){
+  this.favorito=this.favorito
+}
 }
