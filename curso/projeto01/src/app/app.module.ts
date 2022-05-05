@@ -7,7 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Project2Component } from './components/project2/project2.component';
-import {CursoModule} from './components/curso/curso.module';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { ContadorComponent } from './components/contador/contador.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
@@ -17,7 +16,11 @@ import { NgContentComponent } from './components/ng-content/ng-content.component
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { AlteraCorDirective } from './shared/altera-cor.directive';
 import { DiretivasCustomizadasComponent } from './components/diretivas-customizadas/diretivas-customizadas.component';
-import { HighligthDirective } from './shared/highligth.directive'
+import { HighligthDirective } from './shared/highligth.directive';
+import { CursoService } from './components/curso/curso.service';
+import { CursoModule } from './components/curso/curso.module';
+import { CadastroCursoModule } from './components/cadastro-curso/cadastro-curso.module';
+
 
 
 @NgModule({
@@ -39,9 +42,10 @@ import { HighligthDirective } from './shared/highligth.directive'
     BrowserModule,
     AppRoutingModule,
     CursoModule,// Modulo complementar
+    CadastroCursoModule, //Modulo complementar
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: []
 })
 export class AppModule { }

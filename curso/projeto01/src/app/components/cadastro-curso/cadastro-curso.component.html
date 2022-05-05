@@ -1,0 +1,7 @@
+<h2>Cadastro de novos Cursos</h2>
+<input type="text" #cursoInput>
+<button type="button" class="btn btn-primary" (click)="onAddCurso(cursoInput.value)"> Add Curso</button>
+<ul>
+    <li *ngFor="let lista of cursos">{{lista}}</li>
+</ul>
+<app-receber-curso-criado></app-receber-curso-criado>
