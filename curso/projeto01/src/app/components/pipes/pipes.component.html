@@ -1,0 +1,13 @@
+<h2>Exemplo de PIPES</h2>
+<h5>Título: {{livro.titulo | uppercase | lowercase}}</h5>
+<ul>
+    <li>Avaliação: {{livro.estrelas | number:'1.1-2'}}</li>
+    <li>Número de páginas: {{livro.numeropaginas | number}}</li>
+    <li>Preço: {{livro.preco | currency:'BRL':true}}</li>
+    <li>Data de lancamento: {{livro.datalancamento | date:'dd-MMM-YYYY'}}</li>
+    <li>URL: {{livro.url}}</li>
+    <li>Livro: {{livro | json}}</li>
+</ul>
+
+<h5>Exemplo de PIPE Async</h5>
+<p>{{valorAsync | async}}</p>

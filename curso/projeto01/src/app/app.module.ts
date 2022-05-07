@@ -1,7 +1,7 @@
 //MODULO RAIZ 
 
 import { FormsModule } from '@angular/forms'
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,12 @@ import { HighligthDirective } from './shared/highligth.directive';
 import { CursoService } from './components/curso/curso.service';
 import { CursoModule } from './components/curso/curso.module';
 import { CadastroCursoModule } from './components/cadastro-curso/cadastro-curso.module';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { MaterializeButtonModule, MaterializeCardModule } from 'materialize-angular';
+import { ProjetosComponent } from './components/projetos/projetos.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+
 
 
 
@@ -36,16 +42,26 @@ import { CadastroCursoModule } from './components/cadastro-curso/cadastro-curso.
     NgStyleComponent,
     AlteraCorDirective,
     DiretivasCustomizadasComponent,
-    HighligthDirective
+    HighligthDirective,
+    PipesComponent,
+    ProjetosComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CursoModule,// Modulo complementar
     CadastroCursoModule, //Modulo complementar
-    FormsModule
+    FormsModule,
+    MaterializeButtonModule,
+    MaterializeCardModule
   ],
   bootstrap: [AppComponent],
-  providers: []
+ /*  providers: [{
+    provide:LOCALE_ID,
+    useValue:'pt-BR'
+    //Usar pardores brasileiros na aplicação, moeda, casa decimal, datas
+  }] */
 })
 export class AppModule { }
